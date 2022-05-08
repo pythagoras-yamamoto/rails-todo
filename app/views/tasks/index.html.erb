@@ -1,8 +1,11 @@
+
 <h1>タスク一覧</h1>
 <table>
   <thead>
     <tr>
       <th>タスク名</th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -10,6 +13,7 @@
       <tr>
         <td><%= task.title %></td>
         <td><%= link_to '編集', edit_task_path(task) %></td>
+        <td><%= button_to '削除', task_path(task), method: :delete %></td>
       </tr>
     <% end %>
   </tbody>
