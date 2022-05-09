@@ -11,6 +11,21 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <div class="header-logo">
+        <%= link_to("RailsToDoApp", "/") %>
+      </div>
+      <ul class="header-menus">
+        <li>
+          <%= link_to("ToDo一覧", "/posts/new") %>
+        </li>
+        <li>
+          <%= link_to("カテゴリー一覧", "/posts/index") %>
+        </li>
+      </ul>
+    </header>
+    <div class="tasks-area">
+      <%= yield %>
+    </div>
   </body>
 </html>
